@@ -1,0 +1,38 @@
+﻿@model IEnumerable<CMS.Models.Booking>
+
+@{
+    ViewBag.Title = "ViewInfo";
+}
+
+<h2>ViewInfo</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookingDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo.CargoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Shipment.ShipName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BookingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo.CargoName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shipment.ShipName)
+            </td>
+        </tr>
+    }
+
+</table>

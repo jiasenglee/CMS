@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CMS.Models.Cargo>
+
+@{
+    ViewBag.Title = "ViewInfo";
+}
+
+<h2>ViewInfo</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoHeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoWidth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Warehouse.WarehouseName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CargoWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CargoHeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CargoWidth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CargoLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CargoName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.CustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Warehouse.WarehouseName)
+            </td>
+        </tr>
+    }
+
+</table>
